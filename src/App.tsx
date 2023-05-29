@@ -1,4 +1,4 @@
-import { ComponentRendererWrapper, SolidTable } from "@guiexpert/solid-table";
+import { ComponentRendererWrapper, GuiexpertTable } from "@guiexpert/solid-table";
 import { onMount } from "solid-js";
 
 import { ColumnDefIf, GeMouseEvent, TableModelFactory } from "@guiexpert/table";
@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div ref={ref}>
-      <SolidTable
+      <GuiexpertTable
         tableModel={tableModel}
         tableOptions={tableOptions} />
     </div>
