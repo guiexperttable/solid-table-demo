@@ -1,7 +1,7 @@
 import { ComponentRendererWrapper, GuiexpertTable } from "@guiexpert/solid-table";
 import { onMount } from "solid-js";
 
-import { ColumnDefIf, GeMouseEvent, TableModelFactory } from "@guiexpert/table";
+import { ColumnDefIf, GeMouseEvent, TreeFactory } from "@guiexpert/table";
 import {
   applyBodyRenderer,
   createColumnDefs,
@@ -15,7 +15,7 @@ const tableOptions = createTableOptions();
 const rows: SimplePersonIf[] = createTableRows();
 const columnDefs: ColumnDefIf[] = createColumnDefs();
 applyBodyRenderer(columnDefs[2], new ComponentRendererWrapper(GenderRendererComponent));
-const tableModel = TableModelFactory.buildByTypedRowsParam({
+const tableModel = TreeFactory.buildByTypedRowsParam({
   rows,
   columnDefs,
   tableOptions,
